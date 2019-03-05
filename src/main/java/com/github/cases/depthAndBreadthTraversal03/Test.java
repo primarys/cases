@@ -1,14 +1,16 @@
-package com.github.cases.traversalOfTree02;
+package com.github.cases.depthAndBreadthTraversal03;
 
-import com.github.cases.traversalOfTree02.TreeTraversal.TreeNode;
+import com.github.cases.depthAndBreadthTraversal03.DepthAndBreadthTraversal.TreeNode;
+
 /**
  * @Author: jiang tongxue
- * @Date: 2019/3/5 11:28
+ * @Date: 2019/3/5 19:56
  * @Version 1.0
  */
 public class Test {
 
     public static void main(String[] args) {
+
         TreeNode node1 = new TreeNode(1);
         TreeNode node2 = new TreeNode(2);
         TreeNode node3 = new TreeNode(3);
@@ -27,23 +29,13 @@ public class Test {
         node4.left = node8;
         node4.right = node9;
 
-        //递归
-        TreeTraversal treeTraversal = new TreeTraversal();
-        treeTraversal.recursionOfFirst(node1);
-        System.out.println("");
-        treeTraversal.recursionOfMiddle(node1);
-        System.out.println("");
-        treeTraversal.recursionOfLast(node1);
-        System.out.println("");
-
-        //非递归
-        treeTraversal.notRecursionOfFirst(node1);
-        System.out.println("");
-        treeTraversal.notRecursionOfMiddle(node1);
-        System.out.println("");
-        treeTraversal.notRecursionOfLast(node1);
-        System.out.println("");
-
+        DepthAndBreadthTraversal p = new DepthAndBreadthTraversal();
+        p.DFSWithRecursive(node1);
+        System.out.println();
+        p.DFSWithNotRecursive(node1);
+        System.out.println();
+        p.BFS(node1);
 
     }
+
 }
